@@ -141,7 +141,7 @@ Hunter:
       income: 2000.0
       points: 2000
       experience: 2000.0
-    Zombified_Piglin
+    Zombified_Piglin:
       income: 0.5
       points: 1
       experience: 0.25
