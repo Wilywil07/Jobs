@@ -1,34 +1,20 @@
 Hunter:
   fullname: Hunter
   shortname: H
-  FullDescription:
-  - "Earns money killing animals and monsters."
+  description: Earns money killing animals and monsters.
   ChatColour: RED
   chat-display: full
   max-level: 200
   leveling-progression-equation: 10*(joblevel)+(joblevel*joblevel*4)
-  income-progression-equation: baseincome+(baseincome*(joblevel-1)*0.01)-((baseincome+(baseincome*(joblevel-1)*0.01))
+  income-progression-equation: baseincome+(baseincome*(joblevel-1)*0.01)-((baseincome+(joblevel-1)*0.01)
     * ((numjobs-1)*0.05))
-  points-progression-equation: basepoints+(basepoints*(joblevel-1)*0.01)-((basepoints+(basepoints*(joblevel-1)*0.01))
+  points-progression-equation: basepoints+(basepoints*(joblevel-1)*0.01)-((basepoints+(joblevel-1)*0.01)
     * ((numjobs-1)*0.05))
   experience-progression-equation: baseexperience-(baseexperience*((numjobs-1) *0.01))
   rejoinCooldown: 10
-  maxDailyQuests: 1
-  Quests:
-    '1':
-      Name: Predator
-      Objectives:
-      - Kill;Wolf;10
-      - Kill;Creeper;3
-      - Kill;Skeleton;10
-      RewardCommands:
-      - eco give [playerName] 100
-      - msg [playerName] Completed quest!
-      RewardDesc:
-      - Kill everything what moves and get money
-      - Get 100 for this!
   Gui:
-    Item: bow
+    Id: 261
+    Data: 0
   Tame:
     Wolf:
       income: 20.0
@@ -43,6 +29,10 @@ Hunter:
       points: 20
       experience: 15.0
   Kill:
+    Enderman: 
+      income: 1.0
+      points: 1
+      experience: 0.5
     Chicken:
       income: 5.0
       points: 5
@@ -87,10 +77,6 @@ Hunter:
       income: 20.0
       points: 20
       experience: 15.0
-    ENDERMAN:
-      income: 2.0
-      points: 2
-      experience: 2.0
     GHAST:
       income: 30.0
       points: 30
@@ -104,6 +90,10 @@ Hunter:
       points: 30
       experience: 30.0
     mushroom_cow:
+      income: 5.0
+      points: 5
+      experience: 5.0
+    PIG_ZOMBIE:
       income: 5.0
       points: 5
       experience: 5.0
@@ -151,6 +141,10 @@ Hunter:
       income: 2000.0
       points: 2000
       experience: 2000.0
+    Zombified_Piglin
+      income: 0.5
+      points: 1
+      experience: 0.25
     Player:
       income: 9.0
       points: 9
